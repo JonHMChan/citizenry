@@ -1,0 +1,15 @@
+.container {
+	@include outer-container;
+	padding: ($nav-height * 1.25) $content-padding;
+	min-height: 100%;
+	&.container--narrow {
+		max-width: $medium-screen;
+	}
+	&.container--full {
+		padding-top: $nav-height;
+	}
+	&.container--wide {
+		max-width: 100%;
+		width: 100%;
+	}
+}

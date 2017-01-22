@@ -1,0 +1,25 @@
+$tooltip-cover: $green;
+
+.tooltip {
+	display: inline-block;
+	&.fa.fa-check {
+		color: $tooltip-cover;
+	}
+	&:hover {
+		cursor: pointer;
+		&:after {
+			display: block;
+			position: absolute;
+			color: $white;
+			background: $red;
+			content: attr(data-tooltip);
+			margin-top: 5px;
+			transform: translateX(-50%);
+			max-width: 150px;
+			padding: $content-padding $content-padding-double;
+			font-family: $base-font-family;
+			line-height: 1.2;
+			font-size: 10px;
+		}
+	}
+}

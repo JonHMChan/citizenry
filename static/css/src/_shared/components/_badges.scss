@@ -1,0 +1,11 @@
+.badge {
+	display: inline-block;
+	text-transform: uppercase;
+	background: $action-color;
+	color: $white;
+	margin: 0;
+	padding: 3px 8px;
+	border-radius: 2px;
+	font-weight: 600;
+	font-size: 0.75em;
+}

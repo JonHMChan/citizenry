@@ -1,0 +1,114 @@
+#{$all-buttons}, .btn {
+  appearance: none;
+  background-color: $action-color;
+  border-width: 1px;
+  border-style: solid;
+  color: $white;
+  border-color: currentColor;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 600;
+  line-height: 1;
+  padding: $small-spacing $base-spacing;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color $base-duration $base-timing;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    background-color: shade($action-color, 20%);
+    color: $white;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+
+    &:hover {
+      background-color: $action-color;
+    }
+  }
+
+  &.btn--filled:not(.btn--blank):not(.btn--success):not(.btn--pressed) {
+    border-color: $action-color;
+    &:hover {
+      border-color: shade($action-color, 20%);
+    }
+  }
+  &.btn--pressed {
+    background: tint($action-color, 30%);
+    &.btn--filled {
+      border-color: tint($action-color, 30%);
+      &:hover {
+        border-color: $action-color;
+        background: $action-color;
+      }
+    }
+  }
+  &.btn--wide {
+    width: 100%;
+  }
+  &.btn--small {
+    font-size: $base-font-size * 0.75;
+    padding: ($small-spacing * 0.75) ($base-spacing * 0.75);
+  }
+  &.btn--smaller {
+    font-size: $base-font-size * 0.90;
+    padding: ($small-spacing * 0.90) ($base-spacing * 0.90);
+  }
+  &.btn--large {
+    font-size: $base-font-size * 1.25;
+    padding: ($small-spacing * 1.25) ($base-spacing * 1.25);
+  }
+  &.btn--blank {
+    background: none;
+    color: inherit;
+    &:hover {
+      background: rgba(255,255,255,0.25);
+    }
+  }
+  &.btn--clear {
+    background: none;
+    border: none;
+    color: inherit;
+  }
+  &.btn--success {
+    border-color: $tag-green;
+    color: #fff;
+    background-color: $tag-green;
+    &:hover {
+      background-color: shade($tag-green, 20%);
+    }
+  }
+  &.btn--facebook {
+    min-width: 140px;
+    border-color: #fff;
+    color: #fff;
+    background-color: #3B5998;
+    &:hover {
+      background-color: shade(#3B5998, 20%);
+    }
+  }
+  &.btn--google {
+    min-width: 140px;
+    border-color: #fff;
+    color: #fff;
+    background-color: #dd4b39;
+    &:hover {
+      background-color: shade(#dd4b39, 20%);
+    }
+  }
+  &.btn--login {
+    background: none;
+    &:hover {
+      background: rgba(255,255,255,0.25);
+    }
+  }
+}

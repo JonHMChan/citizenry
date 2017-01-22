@@ -1,0 +1,43 @@
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(255,255,255,0.75);
+	width: 100%;
+	height: 100%;
+	z-index: -9999;
+	transition: 0.5s all ease;
+	opacity: 0;
+	&.modal--active {
+		opacity: 1.0;
+		z-index: 9999;
+	}
+	.modal-container {
+		background: $white;
+		padding: $content-padding-double;
+		box-shadow: 0 0 50px rgba(0,0,0,0.25);
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+		max-width: $medium-screen;
+		margin: 0 auto;
+		.modal-close {
+			position: absolute;
+			right: $content-padding;
+			top: $content-padding;
+			color: $dark-gray;
+			cursor: pointer;
+		}
+		.modal-content {
+			@include clearfix;
+			text-align: center;
+			font-size: 0.75em;
+			.modal-header {
+				font-size: 1.5em;
+			}
+		}
+		.modal-buttons {
+			text-align: center;
+		}
+	}
+}

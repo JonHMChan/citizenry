@@ -1,0 +1,160 @@
+.nav {
+	padding-left: $content-padding;
+	padding-right: $content-padding;
+	padding-top: $nav-single-padding;
+	padding-bottom: $nav-single-padding;
+	top: 0;
+	left: auto;
+	right: auto;
+	position: fixed;
+	width: 100%;
+	height: $nav-height;
+	margin: 0;
+	z-index: 9999;
+	background: $white;
+	transition: all 0.25s ease;
+	opacity: 1.0;
+	box-shadow: 0 0 50px rgba(0,0,0,0.1);
+	&.nav--hidden {
+		opacity: 0;
+	}
+	&.nav--top {
+		box-shadow: none;
+	}
+	.nav-content {
+		@include outer-container;
+		height: $nav-content-height;
+		&.nav--wide, &.nav--wide-focus {
+			max-width: 100%;
+			width: 100%;
+			margin: 0;
+		}
+		&.nav--focus, &.nav--wide-focus {
+			.logo span {
+				display: none;
+			}
+			.nav-options {
+				display: none;
+			}
+			.nav-social {
+				display: none;
+			}
+			.nav-login {
+				display: none;
+			}
+		}
+		.nav-option {
+			display: inline-block;
+			float: left;
+			color: inherit;
+			font-size: 0.8em;
+			line-height: $nav-content-height * 0.75;
+			padding: $nav-double-padding * 0.75;
+			height: $nav-content-height;
+			&.nav-option--admin {
+				color: $red;
+				font-weight: bold;
+			}
+			&:hover {
+				text-decoration: none;
+			}
+		}
+		.nav-logo {
+			@include span-columns(2);
+		}
+		.nav-options {
+			@include span-columns(7);
+		}
+		.nav-social {
+			@include span-columns(2);
+			@include media(new-breakpoint(max-width $large-screen)) {
+				visibility: hidden;
+			}
+			text-align: right;
+		}
+		.nav-login {
+			@include span-columns(1);
+			height: 100%;
+			.nav-login-button {
+				padding: $nav-single-padding 0;
+				.btn {
+					color: inherit;
+					float: right;
+					font-size: 0.75em;
+				}
+			}
+			.nav-dropdown {
+				float: right;
+				text-align: right;
+				min-width: 100px;
+				position:relative;
+				display: inline-block;
+				.user-image {
+					display: inline-block;
+					width: $nav-content-height;
+					height: $nav-content-height;
+					img {
+						width: $nav-content-height;
+						height: $nav-content-height;
+						border-radius: $nav-content-height / 2;
+						overflow: hidden;
+					}
+				}
+				.nav-dropdown-container {
+					display: none;
+				    position: absolute;
+				    right: 0;
+				    background: none;
+				    min-width: 175px;
+				    padding-top: $nav-single-padding;
+				    .nav-dropdown-content {
+				    	text-align: left;
+				    	width: 100%;
+				    	background-color: $white;
+				    	border: 1px solid rgba(0,0,0,0.1);
+				    	box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+					    font-size: 0.65em;
+					    line-height: 1.0;
+					    .nav-section {
+					    	display: block;
+						    padding: $content-padding-double ($content-padding-double * 2);
+						    &:last-child {
+						    	border-bottom: none;
+						    }
+					    }
+					    a.nav-section {
+					    	color: $dark-gray;
+					    	font-size: 1.0em;
+					    	font-weight: 600;
+					    	&:hover {
+					    		text-decoration: none;
+					    		background: $light-gray;
+					    	}
+					    	&.nav-section--admin {
+						    	color: $red;
+						    	&:hover {
+						    		color: $white;
+						    		background: $red;
+						    	}
+						    }
+					    }
+					    p {
+					    	margin-bottom: 0.25em;
+					    }
+					    .name {
+					    	font-size: 1.5em;
+					    	font-weight: 600;
+					    	color: $dark-gray;
+					    }
+					    .email {
+							color: $medium-gray;
+					    }
+					}
+				}
+			}
+			.nav-dropdown:hover .nav-dropdown-container {
+			    display: block!important;
+			}
+		}
+	}	
+}

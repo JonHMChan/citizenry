@@ -1,0 +1,54 @@
+.slide {
+	padding: $content-padding;
+	height: 100%;
+	background-size: cover;
+	background-position: center bottom;
+	&.slide--hero {
+		padding-top: $nav-height;
+	}
+	&.slide--partial-hero {
+		height: 75%;
+		&.slide--unfixed {
+			height: auto;
+			min-height: 75%;
+		}
+	}
+	&.slide--partial-mini {
+		height: 50%;
+		&.slide--unfixed {
+			height: auto;
+			min-height: 50%;
+		}
+	}
+	&.slide--unfixed {
+		padding-top: 3em;
+		padding-bottom: 3em;
+		height: auto;
+		min-height: 100%;
+	}
+	.slide-content {
+		@include outer-container;
+		&.slide-content--center {
+			@include vertical-center;
+		}
+		@include media(new-breakpoint(max-width $medium-screen)) {
+			text-align: center;
+		}
+	}
+	.slide-logins {
+		&.slide-logins--center {
+			margin: 0 auto;
+		}
+		max-width: 480px;
+		p {
+			text-transform: uppercase;
+			text-align: center;
+			font-size: 0.75em;
+			letter-spacing: 1px;
+		}
+		@include row();
+		.btn {
+			@include span-columns(6);
+		}
+	}
+}

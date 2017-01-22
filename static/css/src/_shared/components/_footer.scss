@@ -1,0 +1,56 @@
+.footer {
+	@include pad();
+	position: relative;
+	padding-top: $nav-single-padding * 2;
+	padding-bottom: $nav-single-padding * 2;
+	bottom: 0;
+	left: auto;
+	right: auto;
+	width: 100%;
+	margin: 0;
+	z-index: 9999;
+	background: $dark-gray;
+	color: $white;
+	min-height: 150px;
+	p {
+		font-size: 0.8em;
+		margin: 0;
+		@include media(new-breakpoint(max-width $medium-screen)) {
+			font-size: 0.7em;
+		}
+	}
+	.footer-content {
+		@include outer-container;
+		margin-bottom: 1em;
+		.footer-logo {
+			@include span-columns(5);
+			@include media(new-breakpoint(max-width $medium-screen)) {
+				@include span-columns(2);
+			}
+		}
+		.footer-body {
+			@include span-columns(7);
+			@include media(new-breakpoint(max-width $medium-screen)) {
+				@include span-columns(10);
+			}
+			.footer-section {
+				@include pad();
+				@include span-columns(4);
+				h3 {
+					font-weight: 300;
+					font-size: 1.0em;
+				}
+			}
+			a {
+				color: $light-gray;
+			}
+		}
+	}	
+	.footer-legal {
+		@include outer-container;
+		color: $medium-gray;
+		span {
+			float: right;
+		}
+	}
+}
