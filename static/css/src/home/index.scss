@@ -2,26 +2,30 @@
 @import url('https://fonts.googleapis.com/css?family=Cinzel|Cormorant|Lora|Open+Sans');
 
 header {
-	background: linear-gradient(45deg, rgba(124, 174, 255, 0.5),rgba(255, 124, 125, 0.35)), url('../../../img/1.jpg');
+	background: linear-gradient(45deg, rgba(124, 174, 255, 0.45),rgba(255, 124, 125, 0.45)), url('../../../img/2.jpg');
 	background-size: cover;
 	.slide-content {
+		top: 50%;
+		transform: translateY(-50%);
+		position: relative;
 		text-align: left;
 		font-family: 'Lora';
 		color: #fff;
 		.slide-headline {
-			padding: 0 100px;
+			padding: 0px;
+			width: 500px;
 			h1 {
 				font-family: 'Cormorant';
 				font-size: 4.0em;
 				margin-bottom: 0;
-				text-shadow: 0px 0px 15px rgba(0,0,0,0.4);
+				text-shadow: 0px 0px 15px rgba(0,0,0,0.5);
 				span {
 					color: rgba(255,255,255,0.5);
 				}
 			}
 			p.subheading {
 				font-size: 1.25em;
-				text-shadow: 0px 0px 15px rgba(0,0,0,0.4);
+				text-shadow: 0px 0px 15px rgba(0,0,0,0.5);
 			}
 		}
 	}	
@@ -33,13 +37,14 @@ nav.nav-action {
 	font-family: 'Open Sans';
 	padding: 15px 0;	
 	font-size: 1.0em;
-	.nav-buttons {
+	div.nav-buttons {
 		width: 950px;
 		margin: 0 auto;
 		display: flex;
 		a {
 			flex-grow: 1;
 			flex-basis: 0;
+			@include row();
 			margin: 1px;
 			background: #fff;
 			padding: 10px 20px;
@@ -47,10 +52,21 @@ nav.nav-action {
 			text-decoration: none;
 			font-weight: normal;
 			font-size: 11px;
+			> div {
+				display: inline-block;
+			}
+			.nav-number {
+				@include span-columns(3);
+				font-size: 2.75em;
+				line-height: 1.45;
+				font-weight: 600;
+				color: $action-color;
+			}
+			.nav-content {
+				margin-left: 5px;
+			}
 			span {
-				font-weight: bold;
-				color: #333;
-				font-size: 1.2em;
+				font-size: 1.5em;
 			}
 		}
 	}
@@ -61,17 +77,30 @@ section {
 	background-color: rgba(0, 0, 0, 0.05);
 	p {
 		font-size: 0.9em;
+		color: #999;
+	}
+	.callout {
+		font-size: 2.0em;
+		line-height: 1.2;
+		font-family: 'Lora';
+		color: #666;
 	}
 	.section-heading {
 		@include row();
+		margin-bottom: 25px;
 		.section-number {
 			@include span-columns(2);
-			font-size: 5.0em;
+			font-size: 7.0em;
 			font-weight: 600;
+			line-height: 0.9;
+			color: $action-color;
 		}
 		.section-heading-content {
 			@include span-columns(10);
 			h2 {
+				i {
+					margin-right: 10px;
+				}
 				font-family: 'Lora';
 				font-size: 2.0em;
 			}
@@ -80,6 +109,8 @@ section {
 				margin-bottom: 25px;
 			}
 		}
+	}
+	.section-body {
 	}
 	.section-actions {
 		display: flex;

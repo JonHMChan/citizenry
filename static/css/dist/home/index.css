@@ -732,24 +732,28 @@ html {
   font-size: 0.75em; }
 
 header {
-  background: linear-gradient(45deg, rgba(124, 174, 255, 0.5), rgba(255, 124, 125, 0.35)), url("../../../img/1.jpg");
+  background: linear-gradient(45deg, rgba(124, 174, 255, 0.45), rgba(255, 124, 125, 0.45)), url("../../../img/2.jpg");
   background-size: cover; }
   header .slide-content {
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative;
     text-align: left;
     font-family: 'Lora';
     color: #fff; }
     header .slide-content .slide-headline {
-      padding: 0 100px; }
+      padding: 0px;
+      width: 500px; }
       header .slide-content .slide-headline h1 {
         font-family: 'Cormorant';
         font-size: 4.0em;
         margin-bottom: 0;
-        text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4); }
+        text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); }
         header .slide-content .slide-headline h1 span {
           color: rgba(255, 255, 255, 0.5); }
       header .slide-content .slide-headline p.subheading {
         font-size: 1.25em;
-        text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4); }
+        text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); }
 
 nav.nav-action {
   position: fixed;
@@ -758,13 +762,14 @@ nav.nav-action {
   font-family: 'Open Sans';
   padding: 15px 0;
   font-size: 1.0em; }
-  nav.nav-action .nav-buttons {
+  nav.nav-action div.nav-buttons {
     width: 950px;
     margin: 0 auto;
     display: flex; }
-    nav.nav-action .nav-buttons a {
+    nav.nav-action div.nav-buttons a {
       flex-grow: 1;
       flex-basis: 0;
+      display: block;
       margin: 1px;
       background: #fff;
       padding: 10px 20px;
@@ -772,19 +777,43 @@ nav.nav-action {
       text-decoration: none;
       font-weight: normal;
       font-size: 11px; }
-      nav.nav-action .nav-buttons a span {
-        font-weight: bold;
-        color: #333;
-        font-size: 1.2em; }
+      nav.nav-action div.nav-buttons a::after {
+        clear: both;
+        content: "";
+        display: block; }
+      nav.nav-action div.nav-buttons a > div {
+        display: inline-block; }
+      nav.nav-action div.nav-buttons a .nav-number {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 23.23176%;
+        font-size: 2.75em;
+        line-height: 1.45;
+        font-weight: 600;
+        color: #FF6140; }
+        nav.nav-action div.nav-buttons a .nav-number:last-child {
+          margin-right: 0; }
+      nav.nav-action div.nav-buttons a .nav-content {
+        margin-left: 5px; }
+      nav.nav-action div.nav-buttons a span {
+        font-size: 1.5em; }
 
 section {
   padding: 125px 0;
   border-bottom: 1px solid #ccc;
   background-color: rgba(0, 0, 0, 0.05); }
   section p {
-    font-size: 0.9em; }
+    font-size: 0.9em;
+    color: #999; }
+  section .callout {
+    font-size: 2.0em;
+    line-height: 1.2;
+    font-family: 'Lora';
+    color: #666; }
   section .section-heading {
-    display: block; }
+    display: block;
+    margin-bottom: 25px; }
     section .section-heading::after {
       clear: both;
       content: "";
@@ -794,8 +823,10 @@ section {
       display: block;
       margin-right: 2.35765%;
       width: 14.70196%;
-      font-size: 5.0em;
-      font-weight: 600; }
+      font-size: 7.0em;
+      font-weight: 600;
+      line-height: 0.9;
+      color: #FF6140; }
       section .section-heading .section-number:last-child {
         margin-right: 0; }
     section .section-heading .section-heading-content {
@@ -808,6 +839,8 @@ section {
       section .section-heading .section-heading-content h2 {
         font-family: 'Lora';
         font-size: 2.0em; }
+        section .section-heading .section-heading-content h2 i {
+          margin-right: 10px; }
       section .section-heading .section-heading-content .section-description {
         width: 500px;
         margin-bottom: 25px; }
