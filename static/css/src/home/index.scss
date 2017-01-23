@@ -1,1 +1,94 @@
 @import "../_shared/shared";
+@import url('https://fonts.googleapis.com/css?family=Cinzel|Cormorant|Lora|Open+Sans');
+
+header {
+	background: linear-gradient(45deg, rgba(124, 174, 255, 0.5),rgba(255, 124, 125, 0.35)), url('../../../img/1.jpg');
+	background-size: cover;
+	.slide-content {
+		text-align: left;
+		font-family: 'Lora';
+		color: #fff;
+		.slide-headline {
+			padding: 0 100px;
+			h1 {
+				font-family: 'Cormorant';
+				font-size: 4.0em;
+				margin-bottom: 0;
+				text-shadow: 0px 0px 15px rgba(0,0,0,0.4);
+				span {
+					color: rgba(255,255,255,0.5);
+				}
+			}
+			p.subheading {
+				font-size: 1.25em;
+				text-shadow: 0px 0px 15px rgba(0,0,0,0.4);
+			}
+		}
+	}	
+}
+nav.nav-action {
+	position: fixed;
+	width: 100%;
+	bottom: 25px;
+	font-family: 'Open Sans';
+	padding: 15px 0;	
+	font-size: 1.0em;
+	.nav-buttons {
+		width: 950px;
+		margin: 0 auto;
+		display: flex;
+		a {
+			flex-grow: 1;
+			flex-basis: 0;
+			margin: 1px;
+			background: #fff;
+			padding: 10px 20px;
+			color: #999;
+			text-decoration: none;
+			font-weight: normal;
+			font-size: 11px;
+			span {
+				font-weight: bold;
+				color: #333;
+				font-size: 1.2em;
+			}
+		}
+	}
+}
+section {
+	padding: 125px 0;
+	border-bottom: 1px solid #ccc;
+	background-color: rgba(0, 0, 0, 0.05);
+	p {
+		font-size: 0.9em;
+	}
+	.section-heading {
+		@include row();
+		.section-number {
+			@include span-columns(2);
+			font-size: 5.0em;
+			font-weight: 600;
+		}
+		.section-heading-content {
+			@include span-columns(10);
+			h2 {
+				font-family: 'Lora';
+				font-size: 2.0em;
+			}
+			.section-description {
+				width: 500px;
+				margin-bottom: 25px;
+			}
+		}
+	}
+	.section-actions {
+		display: flex;
+		> div {
+			flex-grow: 1;
+			flex-basis: 0;
+			margin: 1px;
+			padding: 25px;
+			background: #fff;
+		}
+	}
+}

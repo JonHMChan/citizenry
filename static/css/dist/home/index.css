@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Cinzel|Cormorant|Lora|Open+Sans");
 button, [type='button'], [type='reset'], [type='submit'], .btn {
   appearance: none;
   background-color: #FF6140;
@@ -7,8 +8,8 @@ button, [type='button'], [type='reset'], [type='submit'], .btn {
   border-color: currentColor;
   cursor: pointer;
   display: inline-block;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 1em;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 0.9em;
   -webkit-font-smoothing: antialiased;
   font-weight: 600;
   line-height: 1;
@@ -42,13 +43,13 @@ button, [type='button'], [type='reset'], [type='submit'], .btn {
   button.btn--wide, [type='button'].btn--wide, [type='reset'].btn--wide, [type='submit'].btn--wide, .btn.btn--wide {
     width: 100%; }
   button.btn--small, [type='button'].btn--small, [type='reset'].btn--small, [type='submit'].btn--small, .btn.btn--small {
-    font-size: 0.75em;
+    font-size: 0.675em;
     padding: 0.5625em 1.125em; }
   button.btn--smaller, [type='button'].btn--smaller, [type='reset'].btn--smaller, [type='submit'].btn--smaller, .btn.btn--smaller {
-    font-size: 0.9em;
+    font-size: 0.81em;
     padding: 0.675em 1.35em; }
   button.btn--large, [type='button'].btn--large, [type='reset'].btn--large, [type='submit'].btn--large, .btn.btn--large {
-    font-size: 1.25em;
+    font-size: 1.125em;
     padding: 0.9375em 1.875em; }
   button.btn--blank, [type='button'].btn--blank, [type='reset'].btn--blank, [type='submit'].btn--blank, .btn.btn--blank {
     background: none;
@@ -104,8 +105,8 @@ input,
 select,
 textarea {
   display: block;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 1em; }
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 0.9em; }
 
 [type='color'], [type='date'], [type='datetime'], [type='datetime-local'], [type='email'], [type='month'], [type='number'], [type='password'], [type='search'], [type='tel'], [type='text'], [type='time'], [type='url'], [type='week'], input:not([type]), textarea {
   appearance: none;
@@ -211,8 +212,8 @@ th {
 
 body {
   color: #333;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 1em;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 0.9em;
   line-height: 1.5; }
 
 h1,
@@ -221,7 +222,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 1.25em;
   line-height: 1.2;
   margin: 0 0 0.75em; }
@@ -563,7 +564,7 @@ html {
       transform: translateX(-50%);
       max-width: 150px;
       padding: 0.5em 1em;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+      font-family: "Open Sans", "Helvetica Neue", sans-serif;
       line-height: 1.2;
       font-size: 10px; }
 
@@ -729,3 +730,92 @@ html {
   border-radius: 2px;
   font-weight: 600;
   font-size: 0.75em; }
+
+header {
+  background: linear-gradient(45deg, rgba(124, 174, 255, 0.5), rgba(255, 124, 125, 0.35)), url("../../../img/1.jpg");
+  background-size: cover; }
+  header .slide-content {
+    text-align: left;
+    font-family: 'Lora';
+    color: #fff; }
+    header .slide-content .slide-headline {
+      padding: 0 100px; }
+      header .slide-content .slide-headline h1 {
+        font-family: 'Cormorant';
+        font-size: 4.0em;
+        margin-bottom: 0;
+        text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4); }
+        header .slide-content .slide-headline h1 span {
+          color: rgba(255, 255, 255, 0.5); }
+      header .slide-content .slide-headline p.subheading {
+        font-size: 1.25em;
+        text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4); }
+
+nav.nav-action {
+  position: fixed;
+  width: 100%;
+  bottom: 25px;
+  font-family: 'Open Sans';
+  padding: 15px 0;
+  font-size: 1.0em; }
+  nav.nav-action .nav-buttons {
+    width: 950px;
+    margin: 0 auto;
+    display: flex; }
+    nav.nav-action .nav-buttons a {
+      flex-grow: 1;
+      flex-basis: 0;
+      margin: 1px;
+      background: #fff;
+      padding: 10px 20px;
+      color: #999;
+      text-decoration: none;
+      font-weight: normal;
+      font-size: 11px; }
+      nav.nav-action .nav-buttons a span {
+        font-weight: bold;
+        color: #333;
+        font-size: 1.2em; }
+
+section {
+  padding: 125px 0;
+  border-bottom: 1px solid #ccc;
+  background-color: rgba(0, 0, 0, 0.05); }
+  section p {
+    font-size: 0.9em; }
+  section .section-heading {
+    display: block; }
+    section .section-heading::after {
+      clear: both;
+      content: "";
+      display: block; }
+    section .section-heading .section-number {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 14.70196%;
+      font-size: 5.0em;
+      font-weight: 600; }
+      section .section-heading .section-number:last-child {
+        margin-right: 0; }
+    section .section-heading .section-heading-content {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 82.94039%; }
+      section .section-heading .section-heading-content:last-child {
+        margin-right: 0; }
+      section .section-heading .section-heading-content h2 {
+        font-family: 'Lora';
+        font-size: 2.0em; }
+      section .section-heading .section-heading-content .section-description {
+        width: 500px;
+        margin-bottom: 25px; }
+  section .section-actions {
+    display: flex; }
+    section .section-actions > div {
+      flex-grow: 1;
+      flex-basis: 0;
+      margin: 1px;
+      padding: 25px;
+      background: #fff; }

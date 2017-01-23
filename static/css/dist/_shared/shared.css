@@ -7,8 +7,8 @@ button, [type='button'], [type='reset'], [type='submit'], .btn {
   border-color: currentColor;
   cursor: pointer;
   display: inline-block;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 1em;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 0.9em;
   -webkit-font-smoothing: antialiased;
   font-weight: 600;
   line-height: 1;
@@ -42,13 +42,13 @@ button, [type='button'], [type='reset'], [type='submit'], .btn {
   button.btn--wide, [type='button'].btn--wide, [type='reset'].btn--wide, [type='submit'].btn--wide, .btn.btn--wide {
     width: 100%; }
   button.btn--small, [type='button'].btn--small, [type='reset'].btn--small, [type='submit'].btn--small, .btn.btn--small {
-    font-size: 0.75em;
+    font-size: 0.675em;
     padding: 0.5625em 1.125em; }
   button.btn--smaller, [type='button'].btn--smaller, [type='reset'].btn--smaller, [type='submit'].btn--smaller, .btn.btn--smaller {
-    font-size: 0.9em;
+    font-size: 0.81em;
     padding: 0.675em 1.35em; }
   button.btn--large, [type='button'].btn--large, [type='reset'].btn--large, [type='submit'].btn--large, .btn.btn--large {
-    font-size: 1.25em;
+    font-size: 1.125em;
     padding: 0.9375em 1.875em; }
   button.btn--blank, [type='button'].btn--blank, [type='reset'].btn--blank, [type='submit'].btn--blank, .btn.btn--blank {
     background: none;
@@ -104,8 +104,8 @@ input,
 select,
 textarea {
   display: block;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 1em; }
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 0.9em; }
 
 [type='color'], [type='date'], [type='datetime'], [type='datetime-local'], [type='email'], [type='month'], [type='number'], [type='password'], [type='search'], [type='tel'], [type='text'], [type='time'], [type='url'], [type='week'], input:not([type]), textarea {
   appearance: none;
@@ -211,8 +211,8 @@ th {
 
 body {
   color: #333;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 1em;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 0.9em;
   line-height: 1.5; }
 
 h1,
@@ -221,7 +221,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 1.25em;
   line-height: 1.2;
   margin: 0 0 0.75em; }
@@ -563,7 +563,7 @@ html {
       transform: translateX(-50%);
       max-width: 150px;
       padding: 0.5em 1em;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+      font-family: "Open Sans", "Helvetica Neue", sans-serif;
       line-height: 1.2;
       font-size: 10px; }
 
